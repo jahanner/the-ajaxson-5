@@ -24,13 +24,17 @@ function fetchAndDisplayGif(event) {
     // configure a few parameters to attach to our request
     var params = {
         api_key: "dc6zaTOxFJmzC",
-        tag : "jackson 5" + searchQuery // TODO should be e.g. "jackson 5 dance"
+        tag : "jackson 5 " + searchQuery // TODO should be e.g. "jackson 5 dance"
     };
 
     // make an ajax request for a random GIF
     $.ajax({
-        url: "http://media3.giphy.com/media/RBLigAVE0xJte/giphy.gif" // TODO where should this request be sent?
-        data: params, // attach those extra parameters onto the request
+        url: "https://api.giphy.com/v1/gifs/random" // TODO where should this request be sent?
+        data: {
+            api_key,
+            tag,
+        },
+             // attach those extra parameters onto the request
         success: function(response) {
             // if the response comes back successfully, the code in here will execute.
 
@@ -40,7 +44,7 @@ function fetchAndDisplayGif(event) {
 
             // TODO
             // 1. set the source attribute of our image to the image_url of the GIF
-            $("#gif").src = url + tag;
+            $("#gif").src = url + params.api_key + params.tag;
             // 2. hide the feedback message and display the image
             $("#gif").hidden("false");
             $("feedback").hidden("true");
@@ -56,6 +60,8 @@ function fetchAndDisplayGif(event) {
 
     // TODO
     // give the user a "Loading..." message while they wait
+    $("#feedback").hidden("false");
+    $("#feedback").text("Loading...");
 
 }
 
