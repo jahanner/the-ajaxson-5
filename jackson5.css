@@ -1,0 +1,18 @@
+body {
+    margin: auto;
+    width: 50%;
+    padding: 10px;
+}
+
+.h1 {
+    background-color: #eee;
+    border-bottom: 10px solid white;
+}
+.jackson {
+    background-color: #eee;
+    border-bottom: 20px solid white;
+}
+.span-validate{
+    background-color: #eee;
+    width: 360px;
+}

@@ -2,23 +2,29 @@
 <html>
 <head>
     <title>The AJAXson 5</title>
+    <link rel="stylesheet" type="text/css" href="jackson5.css"/>
     <script src="https://code.jquery.com/jquery-latest.min.js"></script>
     <script type="text/javascript" src="request-gif.js"></script>
 </head>
 <body>
-    <h1>The AJAXson 5</h1>
-
+    <div class='h1'>
+        <h1>The AJAXson 5</h1>
+    </div>
     <form id="form-gif-request">
-        <label>What kind of Jackson 5 related gif do you want?</label>
-        <br>
-        <input class="tag" type="text"/>
-        <br>
-        <span class='span-validate'>Prove that your are not a robot by answering this riddle:
+        <div class='jackson'>What kind of Jackson 5 related gif do you want?
             <br>
-        <input class='validate' type='text'/>
-        Jacksons are better than 1.
-        </span>
-        <input type="submit" value="Get my Gif!" />
+            <input class="tag" type="text" placeholder="e.g. 'dance'"/>
+            <br>
+            <br>
+        </div>
+
+        <div class='span-validate'>Prove that your are not a robot by answering this riddle:
+            <br>
+            <input class='validate' type='text'/>
+            Jacksons are better than 1.
+            <br>
+        </div>
+            <input type="submit" value="Get my Gif!" />
     </form>
 
     <img id="gif" src="" hidden="true"/>
